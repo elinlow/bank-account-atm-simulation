@@ -14,6 +14,7 @@ const account = {
       this.deposit();
     }
   },
+  //Should I use parseFloat so that it is possible to use numbers with several decimals?
 
   withdrawal: function () {
     const withdrawalAmount = parseInt(prompt("How much would you like to withdraw?"));
@@ -45,7 +46,6 @@ const account = {
 function atm() {
   let choice = parseInt(prompt("Select a choice. 1) See balance, 2) Make a deposit, 3) Make a withdrawal, 4) Get account name, 5) Exit"));
   
-  //prompt user for choice.
   switch (choice) {
     case 1: 
       parseInt(prompt("This is your balance: ", account.getBalance()));
@@ -68,5 +68,5 @@ function atm() {
       break;
   }
 }
-
+//Here, I chose a switch statement, instead of if/else, because I figured it would look better and more clear.
 this.atm();
